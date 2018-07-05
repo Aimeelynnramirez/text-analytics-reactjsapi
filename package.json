@@ -9,8 +9,12 @@
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
     "react-toolbox": "^2.0.0-beta.12",
-    "files": ["./src/**/*.{html,htm,css,js}"],
-    "server": { "baseDir": "./src" }
+    "files": [
+      "./src/**/*.{html,htm,css,js}"
+    ],
+    "server": {
+      "baseDir": "./src"
+    }
   },
   "scripts": {
     "start": "react-scripts start",
