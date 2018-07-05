@@ -1,0 +1,27 @@
+{
+  "name": "sidedrawer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4",
+    "react-toolbox": "^2.0.0-beta.12",
+    "port": 8000,
+    "files": ["./src/**/*.{html,htm,css,js}"],
+    "server": { "baseDir": "./src" }
+  },
+  "scripts": {
+    "start": "react-scripts start -p 80",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": ".",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
