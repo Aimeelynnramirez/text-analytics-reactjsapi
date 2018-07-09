@@ -2,6 +2,7 @@ import React, { Component }from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './Dialog.js';
+import './Title.js';
 import IconButton from '@material-ui/core/IconButton';
 import MUIDataTable from "mui-datatables";
 import MenuIcon from '@material-ui/icons/Menu';
@@ -105,7 +106,10 @@ class App extends Component {
           <p>
         checkout the dev tools <code>source code</code> to see data.
         </p>
-        {text}
+        <p>
+        checkout the dev tools <code>source code</code> node api saved.
+        </p>
+        <p> RELOAD for appending data input on todo.        </p>
       </div>
     );
   }
