@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import './Dialog.js';
 import './Title.js';
+import './LangDetection.js';
+import  './Drawer.js';
+
 import IconButton from '@material-ui/core/IconButton';
 import MUIDataTable from "mui-datatables";
 import MenuIcon from '@material-ui/icons/Menu';
@@ -80,15 +83,18 @@ class App extends Component {
     return (
       
       <div className="App">
+      
         <AppBar position="static">
+        
          <Toolbar>
-           <IconButton color="inherit" aria-label="Menu">
+           <IconButton color="inherit" aria-label="Menu"  onClick={()=>{ alert('Sorry You Clicked on Hamburger Menu...mhmm...yum.'); }}>
              <MenuIcon />
            </IconButton>
-           <Typography variant="title" color="inherit">
+           <Typography variant="title" color="inherit"    onClick={()=>{ alert('Sorry You Clicked on Title to Be Made'); }}>
              Title
+
            </Typography>
-           <Button color="inherit">Login</Button>
+           <Button color="inherit"  onClick={()=>{ alert('Sorry You clicked on Login to Have a Key'); }}>Login</Button>
          </Toolbar>
        </AppBar>
         <header className="App-header">
@@ -110,6 +116,7 @@ class App extends Component {
         checkout the dev tools <code>source code</code> node api saved.
         </p>
         <p> RELOAD for appending data input on todo.        </p>
+   
       </div>
     );
   }

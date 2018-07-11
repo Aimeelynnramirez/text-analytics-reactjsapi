@@ -35,7 +35,7 @@ const TodoForm = ({addTodo}) => {
 
 const Todo = ({todo, remove}) => {
   // Each Todo
-  return (<a href="/#" className="list-group-item"onClick={() => {remove(todo.id)}}>{todo.text}</a>);
+  return (<a href="#" className="list-group-item"onClick={() => {remove(todo.id)}}>{todo.text}</a>);
 }
 
 const TodoList = ({todos, remove}) => {
