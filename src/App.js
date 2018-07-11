@@ -4,7 +4,6 @@ import './App.css';
 import './Dialog.js';
 import './Title.js';
 import './LangDetection.js';
-import  './Drawer.js';
 
 import IconButton from '@material-ui/core/IconButton';
 import MUIDataTable from "mui-datatables";
