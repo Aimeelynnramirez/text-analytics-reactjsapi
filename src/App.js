@@ -5,6 +5,7 @@ import './Dialog.js';
 import './Title.js';
 import './LangDetection.js';
 
+
 import IconButton from '@material-ui/core/IconButton';
 import MUIDataTable from "mui-datatables";
 import MenuIcon from '@material-ui/icons/Menu';
@@ -93,7 +94,7 @@ class App extends Component {
              Title
 
            </Typography>
-           <Button color="inherit"  onClick={()=>{ alert('Sorry You clicked on Login to Have a Key'); }}>Login</Button>
+           <Button color="inherit"  onClick={()=>{ alert('Sorry You clicked on Login to be created'); }}>Login</Button>
          </Toolbar>
        </AppBar>
         <header className="App-header">
