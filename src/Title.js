@@ -61,7 +61,7 @@ class TodoApp extends React.Component{
     this.state = {
       data: []
     }
-    this.apiUrl = '//5b42da2463839a00144c015d.mockapi.io/aimee/todo'
+    this.apiUrl = '//5b42da2463839a00144c015d.mockapi.io/aimee/todo/'
   }
   
   // Lifecycle method
