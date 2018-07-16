@@ -61,7 +61,7 @@ class TodoApp extends React.Component{
     this.state = {
       data: []
     }
-    this.apiUrl = '//react-template-git.herokuapp.com'
+    this.apiUrl = '//backend-api-2018.herokuapp.com/todos'
   }
   
   // Lifecycle method
