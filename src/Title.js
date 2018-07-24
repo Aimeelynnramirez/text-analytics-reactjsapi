@@ -9,9 +9,11 @@ const Title = ({todoCount}) => {
     <div>
        <div className="title">
 
-          <h1>TO-DO List:</h1>
-       </div>
-    </div>
+          <h1>Welcome to the Text Analytics API created:</h1>
+ <p>Extract information from your text
+Use the demo below to experiment with the Text Analytics API. Pick one of our examples or provide your own. Identify the language, sentiment, key phrases, and entities (Preview) of your text by clicking "Analyze".</p>       
+</div>
+</div>
   );
 }
 
@@ -25,7 +27,7 @@ const TodoForm = ({addTodo}) => {
         addTodo(input.value);
         input.value = '';
       }}>
-      <input className="form-control col-md-12 title" ref={node => {
+      <input className="form-control col-md-12" placeholder="Create your text keyphrase here!" ref={node => {
         input = node;
       }} />
       <br />
