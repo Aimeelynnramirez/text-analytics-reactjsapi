@@ -9,9 +9,12 @@ const Title = ({todoCount}) => {
     <div>
        <div className="title">
 
-          <h1>Welcome to the Text Analytics API created:</h1>
- <p>Extract information from your text
-Use the demo below to experiment with the Text Analytics API. Pick one of our examples or provide your own. Identify the language, sentiment, key phrases, and entities (Preview) of your text by clicking "Analyze".</p>       
+          <h1>For Organizing Thoughts:
+          </h1>
+ <p>Click Item to Delete.</p>  
+ <p>Enter to Send.</p>  
+ <p>Reload to See.</p>  
+
 </div>
 </div>
   );
@@ -27,9 +30,11 @@ const TodoForm = ({addTodo}) => {
         addTodo(input.value);
         input.value = '';
       }}>
-      <input className="form-control col-md-12" placeholder="Create your text keyphrase here!" ref={node => {
+      <input className="form-control col-md-12" placeholder="Type." ref={node => {
         input = node;
       }} />
+      <br/>
+       <button>Send</button> 
       <br />
     </form>
   );
@@ -37,7 +42,7 @@ const TodoForm = ({addTodo}) => {
 
 const Todo = ({todo, remove}) => {
   // Each Todo
-  return (<a href="#" className="list-group-item"onClick={() => {remove(todo.id)}}>{todo.text}</a>);
+  return (<a href="todo" className="list-group-item"onClick={() => {remove(todo.id)}}>{todo.text}</a>);
 }
 
 const TodoList = ({todos, remove}) => {
@@ -46,10 +51,10 @@ const TodoList = ({todos, remove}) => {
     return (<Todo className="title "todo={todo} key={todo.id} remove={remove}/>)
   });
   return (<div className="list-group " style={{marginTop:'30px'}}>
-  <p>1){todoNode[1]}</p>
-<p> 2){todoNode[2]}</p>
-<p> 3){todoNode[3]}</p>
-<p> 4){todoNode[5]}</p></div>);
+  <p>1){todoNode[7]}</p>
+<p> 2){todoNode[8]}</p>
+<p> 3){todoNode[9]}</p>
+<p> 4){todoNode[10]}</p></div>);
 }
 
 // Contaner Component
@@ -101,7 +106,10 @@ class TodoApp extends React.Component{
     
   }
 
- 
+  sendForm() {
+    window.location.reload();
+   
+  }
   render(){
     // Render JSX
     return (
@@ -111,11 +119,20 @@ class TodoApp extends React.Component{
 
        
         <Title todoCount={this.state.data.length}/>
+        <hr/>
+
         <TodoForm addTodo={this.addTodo.bind(this)}/>
+        <hr/>
+
         <TodoList 
           todos={this.state.data} 
           remove={this.handleRemove.bind(this)}
         />
+       <hr/>
+       <p>Click Confirm after Send or Enter.</p>
+       <button type="button" onClick={ this.sendForm.bind(this) }>
+            <span>Confirm</span>
+        </button>
       </div>
     );
   }
